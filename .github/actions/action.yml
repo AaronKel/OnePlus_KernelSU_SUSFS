@@ -331,7 +331,7 @@ runs:
           echo "Adding Reverse Engineering & Debugging Tools to gki_defconfig..."
           echo "# REVERSE ENGINEERING & DEBUGGING TOOLS" >> ./common/arch/arm64/configs/gki_defconfig
           echo "CONFIG_DEVMEM=y" >> ./common/arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DEVMEM_STRICT=n" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_STRICT_DEVMEM=n" >> ./common/arch/arm64/configs/gki_defconfig
 
       - name: Run sed and perl Commands
         shell: bash
