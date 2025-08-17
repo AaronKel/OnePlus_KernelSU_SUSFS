@@ -328,6 +328,27 @@ runs:
           echo "CONFIG_IP6_NF_TARGET_HL=y" >> ./common/arch/arm64/configs/gki_defconfig
           echo "CONFIG_IP6_NF_MATCH_HL=y" >> ./common/arch/arm64/configs/gki_defconfig
 
+          echo "Adding Reverse Engineering & Debugging Tools to gki_defconfig..."
+          echo "# REVERSE ENGINEERING & DEBUGGING TOOLS" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DEVMEM=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DEVMEM_STRICT=n" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_KALLSYMS=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_KALLSYMS_ALL=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DEBUG_FS=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DEBUG_INFO=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_FTRACE=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_FUNCTION_TRACER=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_FUNCTION_GRAPH_TRACER=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DYNAMIC_FTRACE=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DYNAMIC_FTRACE_WITH_REGS=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_FTRACE_SYSCALLS=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_KPROBES=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_KPROBE_EVENTS=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_KPROBES_ON_FTRACE=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_HW_BREAKPOINT=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HW_BREAKPOINT=y" >> ./common/arch/arm64/configs/gki_defconfig
+          echo "CONFIG_PERF_EVENTS=y" >> ./common/arch/arm64/configs/gki_defconfig
+
       - name: Run sed and perl Commands
         shell: bash
         run: |
